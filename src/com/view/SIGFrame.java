@@ -5,7 +5,7 @@
  */
 package com.view;
 
-import com.controller.SIGListener;
+import com.controller.SIGenerator;
 import com.model.HeaderTableModel;
 import com.model.InvoiceHeader;
 import com.model.LineTableModel;
@@ -77,6 +77,11 @@ public class SIGFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(invoicesTable);
 
         createInvBtn.setText("Create Invoice");
+        createInvBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createInvBtnActionPerformed(evt);
+            }
+        });
 
         deleteInvBtn.setText("Delete Invoice");
 
@@ -198,6 +203,10 @@ public class SIGFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void createInvBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createInvBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_createInvBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -258,7 +267,7 @@ public class SIGFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem loadMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
     // End of variables declaration//GEN-END:variables
-    private SIGListener listener = new SIGListener(this);
+    private SIGenerator listener = new SIGenerator(this);
     private ArrayList<InvoiceHeader> invoices;
     public static SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
     private HeaderTableModel headerTableModel;
@@ -306,7 +315,7 @@ public class SIGFrame extends javax.swing.JFrame {
         return linesTable;
     }
 
-    public SIGListener getListener() {
+    public SIGenerator getListener() {
         return listener;
     }
 

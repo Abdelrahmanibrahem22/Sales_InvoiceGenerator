@@ -33,13 +33,13 @@ import javax.swing.event.ListSelectionListener;
  *
  * @author DELL
  */
-public class SIGListener implements ActionListener, ListSelectionListener {
+public class SIGenerator implements ActionListener, ListSelectionListener {
 
     private SIGFrame frame;
     private InvoiceHeaderDialog headerDialog;
     private InvoiceLineDialog lineDialog;
 
-    public SIGListener(SIGFrame frame) {
+    public SIGenerator(SIGFrame frame) {
         this.frame = frame;
     }
 
